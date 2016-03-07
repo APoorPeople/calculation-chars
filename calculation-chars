@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main()
+{
+char ch[100] = "";
+void sum(char* ch);
+gets(ch);
+sum(ch);
+return 0;
+}
+void sum(char *ch)
+{
+int character=0,number=0,others=0,space=0;
+int i = 0;
+while(ch[i]!='\0')
+{
+    if((ch[i]>='A'&&ch[i]<='Z')||(ch[i]>='a'&&ch[i]<='z'))character++;
+        else if(ch[i]>='0'&&ch[i]<='9')number++;
+        else if(ch[i]=' ')space++;
+        else others++;
+  i++;
+}
+printf("%d %d %d %d",character,number,space,others);
+}
